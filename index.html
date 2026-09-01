@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ankit Singh | IIT Kanpur</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f6f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: #111827;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .name {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        /* Hero */
+        .hero {
+            background: white;
+            padding: 90px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #555;
+            font-size: 17px;
+            max-width: 650px;
+        }
+
+        .iitk {
+            margin-top: 25px;
+            display: inline-block;
+            background: #111827;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 8%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #111827;
+        }
+
+        .about {
+            background: #f5f6f8;
+        }
+
+        .about p {
+            max-width: 850px;
+            color: #555;
+            font-size: 17px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* Contact */
+        .contact {
+            background: white;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: #ddd;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="name">Ankit Singh</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Introduction -->
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <h1>Hello, I'm Ankit Singh.</h1>
+
+            <h2>M.Tech Student at IIT Kanpur</h2>
+
+            <p>
+                I am a postgraduate student at the Indian Institute of Technology
+                Kanpur, interested in software engineering, artificial intelligence,
+                machine learning, and geospatial technologies.
+            </p>
+
+            <a class="iitk" href="#about">
+                Know More About Me
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am currently pursuing my M.Tech at IIT Kanpur. My academic interests
+            include geoinformatics, artificial intelligence, machine learning,
+            computer science, and data-driven problem solving.
+        </p>
+
+        <br>
+
+        <p>
+            Alongside my academic work, I am strengthening my programming and
+            algorithmic problem-solving skills. I am particularly interested in
+            developing software and AI systems that can solve real-world problems.
+        </p>
+
+    </section>
+
+
+    <!-- Interests -->
+    <section id="interests">
+
+        <h2>Areas of Interest</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Software Engineering</h3>
+                <p>
+                    Data structures, algorithms, programming and development
+                    of scalable software systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    Machine learning, deep learning and AI-based approaches
+                    for solving complex problems.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Geospatial Technology</h3>
+                <p>
+                    Remote sensing, GIS, geospatial data analysis and
+                    applications of AI in geospatial domains.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section>
+
+        <h2>Education</h2>
+
+        <div class="card">
+
+            <h3>Indian Institute of Technology Kanpur</h3>
+
+            <p>
+                M.Tech — Geoinformatics
+            </p>
+
+            <p>
+                IIT Kanpur, India
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:ankits26@iitk.ac.in">
+                ankits26@iitk.ac.in
+            </a>
+        </p>
+
+        <p>
+            <strong>Institution:</strong>
+            Indian Institute of Technology Kanpur
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Ankit Singh · Indian Institute of Technology Kanpur
+        </p>
+
+    </footer>
+
+</body>
+</html>
