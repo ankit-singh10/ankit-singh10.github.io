@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,53 +9,44 @@
 
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f6f8;
-            color: #222;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
+            color: #222;
+            background: #f5f6f8;
         }
 
-        /* Navigation */
-        nav {
+        header {
             background: #111827;
             color: white;
-            padding: 18px 8%;
+            padding: 20px 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        nav .name {
+        header h2 {
             font-size: 22px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 15px;
+            margin-left: 25px;
         }
 
         nav a:hover {
-            color: #93c5fd;
+            text-decoration: underline;
         }
 
-        /* Hero */
         .hero {
             background: white;
-            padding: 90px 8%;
+            padding: 70px 10%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -62,43 +54,36 @@
         }
 
         .hero-text {
-            max-width: 700px;
+            max-width: 650px;
         }
 
         .hero h1 {
             font-size: 48px;
-            margin-bottom: 15px;
-            color: #111827;
+            margin-bottom: 10px;
         }
 
         .hero h2 {
             font-size: 24px;
             font-weight: normal;
-            color: #4b5563;
+            color: #555;
             margin-bottom: 20px;
         }
 
         .hero p {
+            font-size: 18px;
             color: #555;
-            font-size: 17px;
-            max-width: 650px;
         }
 
-        .iitk {
-            margin-top: 25px;
-            display: inline-block;
-            background: #111827;
-            color: white;
-            padding: 12px 22px;
-            border-radius: 6px;
-            text-decoration: none;
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #e5e7eb;
         }
 
-        /* Sections */
         section {
-            padding: 70px 8%;
-            max-width: 1200px;
-            margin: auto;
+            padding: 60px 10%;
         }
 
         section h2 {
@@ -112,79 +97,113 @@
         }
 
         .about p {
-            max-width: 850px;
-            color: #555;
+            max-width: 900px;
             font-size: 17px;
         }
 
-        /* Cards */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+        .experience {
+            background: white;
         }
 
-        .card {
+        .job {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f5f6f8;
+            border-left: 4px solid #111827;
+        }
+
+        .job h3 {
+            font-size: 22px;
+        }
+
+        .job .company {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .job .duration {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .job ul {
+            margin-left: 20px;
+        }
+
+        .education {
+            background: #f5f6f8;
+        }
+
+        .education-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .skills {
+            background: white;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #e5e7eb;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .projects {
+            background: #f5f6f8;
+        }
+
+        .project {
             background: white;
             padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
         }
 
-        .card h3 {
-            margin-bottom: 10px;
-            color: #111827;
-        }
-
-        .card p {
-            color: #666;
-        }
-
-        /* Contact */
         .contact {
-            background: white;
+            background: #111827;
+            color: white;
         }
 
-        .contact p {
-            margin: 8px 0;
+        .contact h2 {
+            color: white;
         }
 
         .contact a {
-            color: #2563eb;
-            text-decoration: none;
+            color: white;
         }
 
-        /* Footer */
         footer {
-            background: #111827;
-            color: #ddd;
             text-align: center;
-            padding: 25px;
-            font-size: 14px;
+            padding: 20px;
+            background: #0b1120;
+            color: white;
         }
 
-        @media (max-width: 768px) {
-
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
+        @media (max-width: 700px) {
 
             .hero {
-                flex-direction: column;
+                flex-direction: column-reverse;
                 text-align: center;
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 36px;
             }
 
-            .cards {
-                grid-template-columns: 1fr;
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
             }
         }
     </style>
@@ -193,93 +212,112 @@
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="name">Ankit Singh</div>
+    <header>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#interests">Interests</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <h2>Ankit Singh</h2>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
 
 
-    <!-- Introduction -->
-    <div class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
 
         <div class="hero-text">
 
-            <h1>Hello, I'm Ankit Singh.</h1>
+            <h1>Ankit Singh</h1>
 
-            <h2>M.Tech Student at IIT Kanpur</h2>
+            <h2>
+                M.Tech Student at IIT Kanpur
+            </h2>
 
             <p>
-                I am a postgraduate student at the Indian Institute of Technology
-                Kanpur, interested in software engineering, artificial intelligence,
-                machine learning, and geospatial technologies.
+                Software Engineer | Artificial Intelligence & Machine Learning |
+                Geospatial AI
             </p>
 
-            <a class="iitk" href="#about">
-                Know More About Me
-            </a>
+            <p style="margin-top:20px;">
+                Welcome to my personal website. I am interested in
+                software engineering, artificial intelligence, machine learning,
+                and applications of AI in geospatial technologies.
+            </p>
 
         </div>
 
-    </div>
+
+        <!-- Profile Photo -->
+        <img
+            src="profile.jpg"
+            alt="Ankit Singh"
+            class="profile-photo">
+
+    </section>
 
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="about">
 
         <h2>About Me</h2>
 
         <p>
-            I am currently pursuing my M.Tech at IIT Kanpur. My academic interests
-            include geoinformatics, artificial intelligence, machine learning,
-            computer science, and data-driven problem solving.
+            I am currently pursuing my M.Tech at IIT Kanpur.
+            Before joining IIT Kanpur, I worked as a Software Engineer
+            in the IT industry for four years.
         </p>
 
-        <br>
-
-        <p>
-            Alongside my academic work, I am strengthening my programming and
-            algorithmic problem-solving skills. I am particularly interested in
-            developing software and AI systems that can solve real-world problems.
+        <p style="margin-top:15px;">
+            My current interests include Artificial Intelligence,
+            Machine Learning, Computer Vision, Software Engineering,
+            and Geospatial AI. I am particularly interested in combining
+            modern AI techniques with geospatial and remote sensing data.
         </p>
 
     </section>
 
 
-    <!-- Interests -->
-    <section id="interests">
+    <!-- Experience -->
+    <section id="experience" class="experience">
 
-        <h2>Areas of Interest</h2>
+        <h2>Experience</h2>
 
-        <div class="cards">
+        <div class="job">
 
-            <div class="card">
-                <h3>Software Engineering</h3>
-                <p>
-                    Data structures, algorithms, programming and development
-                    of scalable software systems.
-                </p>
+            <h3>Software Engineer</h3>
+
+            <div class="company">
+                HCLSoftware
             </div>
 
-            <div class="card">
-                <h3>Artificial Intelligence</h3>
-                <p>
-                    Machine learning, deep learning and AI-based approaches
-                    for solving complex problems.
-                </p>
+            <div class="duration">
+                4 Years
             </div>
 
-            <div class="card">
-                <h3>Geospatial Technology</h3>
-                <p>
-                    Remote sensing, GIS, geospatial data analysis and
-                    applications of AI in geospatial domains.
-                </p>
-            </div>
+            <ul>
+                <li>
+                    Worked on software development and enterprise applications.
+                </li>
+
+                <li>
+                    Developed and maintained web-based applications.
+                </li>
+
+                <li>
+                    Worked with modern software development technologies.
+                </li>
+
+                <li>
+                    Collaborated with development teams to design,
+                    implement and test software features.
+                </li>
+            </ul>
 
         </div>
 
@@ -287,20 +325,83 @@
 
 
     <!-- Education -->
-    <section>
+    <section id="education" class="education">
 
         <h2>Education</h2>
 
-        <div class="card">
+        <div class="education-item">
 
-            <h3>Indian Institute of Technology Kanpur</h3>
+            <h3>M.Tech — Geoinformatics</h3>
 
             <p>
-                M.Tech — Geoinformatics
+                Indian Institute of Technology Kanpur
             </p>
 
+        </div>
+
+
+        <div class="education-item">
+
+            <h3>Bachelor's Degree</h3>
+
             <p>
-                IIT Kanpur, India
+                Add your bachelor's degree, university and year here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skill-list">
+
+            <span class="skill">C</span>
+            <span class="skill">C++</span>
+            <span class="skill">Java</span>
+            <span class="skill">Python</span>
+            <span class="skill">Data Structures & Algorithms</span>
+            <span class="skill">Git</span>
+            <span class="skill">React</span>
+            <span class="skill">TypeScript</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Deep Learning</span>
+            <span class="skill">Computer Vision</span>
+            <span class="skill">GIS</span>
+            <span class="skill">Remote Sensing</span>
+            <span class="skill">GeoAI</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+
+        <h2>Projects</h2>
+
+        <div class="project">
+
+            <h3>Project 1</h3>
+
+            <p>
+                Add your project description here.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>Project 2</h3>
+
+            <p>
+                Add your project description here.
             </p>
 
         </div>
@@ -314,28 +415,28 @@
         <h2>Contact</h2>
 
         <p>
-            <strong>Email:</strong>
-            <a href="mailto:ankits26@iitk.ac.in">
-                ankits26@iitk.ac.in
+            Email:
+            <a href="mailto:your-email@example.com">
+                your-email@example.com
             </a>
         </p>
 
         <p>
-            <strong>Institution:</strong>
-            Indian Institute of Technology Kanpur
+            GitHub:
+            <a href="https://github.com/ankit-singh10">
+                github.com/ankit-singh10
+            </a>
         </p>
 
     </section>
 
 
-    <!-- Footer -->
     <footer>
 
-        <p>
-            © 2026 Ankit Singh · Indian Institute of Technology Kanpur
-        </p>
+        © 2026 Ankit Singh
 
     </footer>
 
 </body>
+
 </html>
